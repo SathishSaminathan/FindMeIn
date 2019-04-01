@@ -10,6 +10,8 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 
+import com.viromedia.bridge.ReactViroPackage;
+
 import com.airbnb.android.react.maps.MapsPackage;
 
 import java.util.Arrays;
@@ -27,8 +29,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new RNGestureHandlerPackage(),
-            new VectorIconsPackage(),
+          // new ReactViroPackage(ReactViroPackage.ViroPlatform.valueOf(BuildConfig.VR_PLATFORM)),
+          new RNGestureHandlerPackage(),
+          new VectorIconsPackage(),
           new MapsPackage()
       );
     }
