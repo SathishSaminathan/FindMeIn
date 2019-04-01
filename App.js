@@ -7,8 +7,21 @@
  */
 
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View, Dimensions, PermissionsAndroid } from "react-native";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  PermissionsAndroid,
+  StatusBar
+} from "react-native";
 import MapView from "react-native-maps";
+import Home from "./src/screens/Home";
+import Layout from "./src/screens/Layout";
+import Colors from "./src/assets/styleConstant/Colors";
+import ChatScreen from "./src/screens/ChatScreen";
+import AppStackContainer from "./src/navigations/AppStackNavigations";
 
 const { width, height } = Dimensions.get("window");
 
@@ -16,7 +29,7 @@ export default class App extends Component {
   state = {
     Granted: false
   };
-  componentWillMount() {
+  componentDidMount() {
     this.requestLocationPermission();
   }
   async requestLocationPermission() {
@@ -44,31 +57,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <MapView
-          style={styles.map}
-          region={{
-            latitude: 37.78825,
-            longitude: -122.4324,
-            latitudeDelta: 0.015,
-            longitudeDelta: 0.0121
-          }}
-        />
+      <View style={{ flex: 1, backgroundColor: Colors.lightgrey, }}>
+        <StatusBar backgroundColor={Colors.themeOrangeDark} />
+        <AppStackContainer/>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    ...StyleSheet.absoluteFillObject,
-    height: "100%",
-    width: width,
-    justifyContent: "flex-end",
-    alignItems: "center",
-    backgroundColor: "red"
-  },
-  map: {
-    ...StyleSheet.absoluteFillObject
-  }
-});
