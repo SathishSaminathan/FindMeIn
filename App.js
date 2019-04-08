@@ -22,6 +22,7 @@ import Layout from "./src/screens/Layout";
 import Colors from "./src/assets/styleConstant/Colors";
 import ChatScreen from "./src/screens/ChatScreen";
 import AppStackContainer from "./src/navigations/AppStackNavigations";
+import Auth from "./src/screens/Auth";
 
 const { width, height } = Dimensions.get("window");
 
@@ -60,6 +61,7 @@ export default class App extends Component {
       <View style={{ flex: 1, backgroundColor: Colors.lightgrey, }}>
         <StatusBar backgroundColor={Colors.themeOrangeDark} />
         <AppStackContainer/>
+        {/* <Auth/> */}
       </View>
     );
   }
