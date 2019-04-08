@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "42208539354",
+    "firebase_url": "https://findmein-1edc2.firebaseio.com",
+    "project_id": "findmein-1edc2",
+    "storage_bucket": "findmein-1edc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42208539354:android:649d1b1df1cb55d7",
+        "android_client_info": {
+          "package_name": "com.findmein"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42208539354-77fup3s0uh4uammqs05omaet845q6elg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA3Htk1CLBwFST8QrygmeaxWNpkho7nfM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
